@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+    <script src="script.js"></script>
     <title>Animated Nav Bar</title>
 </head>
 <body>
@@ -41,7 +42,7 @@
     <!-- ❤️  -->
     <div class="footer-copyright">
       <a href="https://www.youtube.com/channel/UCbZ5S8b8L2xvpFQnHQyrtJg" target="_blank"><span class="material-icons">
-          person
+          person_outline
         </span></a> <a class="footer_link2" href="https://github.com/YameenAli" target="_blank"><span class="material-icons">
           code
         </span></a>
@@ -50,30 +51,6 @@
   
   </footer>
   <!-- Footer ends -->
-  
-
-  <script>
-    let linkItems = document.getElementsByTagName("li");
-let selector = document.getElementById("selector");
-
-selector.style.left = 3 * 50 - 50 + "px";
-
-for (let linkItem of linkItems) {
-  linkItem.addEventListener("click", (e) => {
-    let listNum = e.target.dataset.list;
-    selector.style.left = listNum * 50 - 50 + "px";
-    event.target.classList.add("active");
-
-    // remove active class from other links
-    for (let linkItem of linkItems) {
-      if (linkItem.dataset.list !== listNum) {
-        linkItem.classList.remove("active");
-      }
-    }
-  });
-}
-
-  </script>
   
 </body>
 </html>
